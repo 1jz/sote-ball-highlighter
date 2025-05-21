@@ -1,9 +1,6 @@
 package com.soteball;
 
-import net.runelite.client.config.Alpha;
-import net.runelite.client.config.Config;
-import net.runelite.client.config.ConfigGroup;
-import net.runelite.client.config.ConfigItem;
+import net.runelite.client.config.*;
 
 import java.awt.*;
 
@@ -40,5 +37,27 @@ public interface SoteBallConfig extends Config {
     )
     default Color defaultDeathBallColour() {
         return Color.YELLOW;
+    }
+    
+    @Range(max = 100)
+    @ConfigItem(
+            name = "Outline Thickness",
+            keyName = "outlineThickness",
+            description = "thickness value of outline",
+            position = 3
+    )
+    default int outlineThickness() {
+        return 1;
+    }
+
+    @Range(max = 100)
+    @ConfigItem(
+            name = "Outline Feather",
+            keyName = "outlineFeather",
+            description = "feather value of outline",
+            position = 4
+    )
+    default int outlineFeather() {
+        return 1;
     }
 }

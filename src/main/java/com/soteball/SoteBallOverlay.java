@@ -59,7 +59,7 @@ class SoteBallOverlay extends Overlay {
                 double t = atan2(p.getVelocityX(), p.getVelocityY());
                 int jau = (int) (t * (2048 / (2 * Math.PI)));
                 jau = jau + 1024 & 2047;
-                drawModelOutline(p.getModel(), (int) p.getX(), (int) p.getY(), (int) p.getZ(), jau, 1, color, 1);
+                drawModelOutline(p.getModel(), (int) p.getX(), (int) p.getY(), (int) p.getZ(), jau, config.outlineThickness(), color, config.outlineFeather());
             }
         });
         return null;

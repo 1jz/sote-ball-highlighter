@@ -4,7 +4,7 @@ import net.runelite.client.config.*;
 
 import java.awt.*;
 
-@ConfigGroup("example")
+@ConfigGroup("sote ball")
 public interface SoteBallConfig extends Config {
     @Alpha
     @ConfigItem(
@@ -38,7 +38,7 @@ public interface SoteBallConfig extends Config {
     default Color defaultDeathBallColour() {
         return Color.YELLOW;
     }
-    
+
     @Range(max = 100)
     @ConfigItem(
             name = "Outline Thickness",
